@@ -3,9 +3,9 @@
 use yii\db\Migration;
 
 /**
- * Class m180519_132119_comment
+ * Class m230519_234917_comment
  */
-class m180519_132119_comment extends Migration
+class m230519_234917_comment extends Migration
 {
     public function up()
     {
