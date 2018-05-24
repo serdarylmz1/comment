@@ -17,15 +17,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'title') ?>
+    <?= $form->field($model, 'username') ?>
 
-    <?= $form->field($model, 'content') ?>
+    <?= $form->field($model, 'comment') ?>
 
     <?= $form->field($model, 'priority') ?>
 
     <?= $form->field($model, 'date') ?>
 
-    <?php // echo $form->field($model, 'author') ?>
+    <?php // echo $form->field($model, 'email') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
