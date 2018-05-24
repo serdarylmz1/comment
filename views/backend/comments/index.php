@@ -8,11 +8,11 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Comments';
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = $this->username;
 ?>
 <div class="comment-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->username) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
@@ -25,11 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'title',
-            'content:ntext',
+            'username',
+            'comment:text',
             'priority',
             'date',
-            //'author',
+            //'email',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
