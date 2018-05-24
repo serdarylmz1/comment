@@ -8,11 +8,11 @@ use yii\widgets\DetailView;
 
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Comments', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = $this->username;
 ?>
 <div class="comment-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->username) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -29,11 +29,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'title',
-            'content:ntext',
+            'username',
+            'comment:ntext',
             'priority',
             'date',
-            'author',
+            'email',
         ],
     ]) ?>
 
