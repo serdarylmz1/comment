@@ -8,11 +8,11 @@ use yii\helpers\Html;
 
 $this->title = 'Create Comment';
 $this->params['breadcrumbs'][] = ['label' => 'Comments', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = $this->username;
 ?>
 <div class="comment-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->username) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,
