@@ -8,11 +8,11 @@ use Yii;
  * This is the model class for table "comment".
  *
  * @property int $id
- * @property string $title
- * @property string $content
+ * @property text $email
+ * @property string $comment
  * @property string $priority
  * @property string $date
- * @property int $author
+ * @property string $username
  */
 class Comment extends \yii\db\ActiveRecord
 {
@@ -30,10 +30,11 @@ class Comment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'content', 'priority'], 'required'],
-            [['content', 'priority'], 'string'],
+            [['username', 'comment', 'priority','email'], 'required'],
+            [['username', 'priority'], 'string'],
             [['date'], 'safe'],
-            [['title'], 'string', 'max' => 255],
+            [['comment'], 'string', 'max' => 255],
+            [['email'], 'string'],
         ];
     }
 
@@ -44,11 +45,11 @@ class Comment extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
+            'username' => 'Username',
+            'comment' => 'Comment',
             'priority' => 'Priority',
             'date' => 'Date',
-            'author' => 'Author',
+            'email' => 'Email',
         ];
     }
 }
